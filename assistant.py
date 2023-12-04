@@ -3,9 +3,6 @@ import webbrowser as web
 import os
 import datetime
 import time
-from tkinter import *
-from tkinter import messagebox
-
 hello = input("What's Your Name?")
 print(f"Hello {hello}. I'm your personal assistant.")
 
@@ -18,13 +15,8 @@ while True:
     user = input("How can I help you? ")
     userlow = user.lower()
     if ("quit" in userlow):
-        #bye()
-        messagebox.askyesno('Are you sure?')
-        root = Tk()
-        root.destroy()
-        """if True in messagebox.askyesno():
-            break
-"""
+        bye()
+
     elif ('website' in userlow):
         #open website
         web.get()
@@ -57,8 +49,6 @@ while True:
                 codePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
             print("Opening", appcap)
             messagebox.showinfo('', f'Opening {appcap}')
-            root = Tk()
-            root.quit()
             time.sleep(0.1)
             os.startfile(codePath)
         except Exception as e:
