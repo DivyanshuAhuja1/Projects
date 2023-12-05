@@ -40,15 +40,12 @@ while True:
     elif ('app' in userlow):
         # open application
         try:
-            codePathhalf = "C:\\Users\\Admin\\Documents\\11th commerce 2023-24\\Divyanshu Ahuja 11Com\\apps\\"
+            codePathhalf = "path\to\dictionary\where\.exe\files\of\application\are\stored"
             appname = input('App Name ')
             applow = appname.lower()
             appcap = appname.capitalize()
             codePath = codePathhalf + applow
-            if ('chrome' in applow):
-                codePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
             print("Opening", appcap)
-            messagebox.showinfo('', f'Opening {appcap}')
             time.sleep(0.1)
             os.startfile(codePath)
         except Exception as e:
